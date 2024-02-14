@@ -1,6 +1,9 @@
 public class StackEmptyException extends Exception {
-    public StackEmptyException(String message)  {
+    public StackEmptyException(String message) {
         super(message);
     }
 
-    public StackEmptyException()    {
+    public StackEmptyException() {
+        super("Stack is empty!");
+    }
+}

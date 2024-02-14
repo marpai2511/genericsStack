@@ -1,3 +1,8 @@
+/**
+ *This is the main class
+ * @author Mario Paia
+ * @version 2024-02-14
+ */
 public class Main {
     public static void main(String[] args) {
         Stack<String> stringStack = new Stack<>(3);

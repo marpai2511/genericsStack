@@ -1,3 +1,8 @@
+/**
+ *This is a simple Stack Class
+ * @author Mario Paia
+ * @version 2024-02-14
+ */
 public class Stack <T> {
     private T[] stack;
 

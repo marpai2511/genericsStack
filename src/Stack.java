@@ -9,5 +9,12 @@ public class Stack <T> {
         this.stack = (T[]) new Object[size];
     }
 
-
+    public boolean push(T item) {
+        for(int i = 0; i < stack.length; i++) {
+            if(this.stack[i] == null) {
+                this.stack[i] = item;
+                return true;
+            }
+        }
+    }
 }

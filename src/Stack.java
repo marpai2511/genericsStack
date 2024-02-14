@@ -24,7 +24,7 @@ public class Stack <T> {
     }
 
 
-    /**
+    /**0
      * This method removes the top object of the stack while also returning its value
      * @return the object
      */
@@ -48,5 +48,20 @@ public class Stack <T> {
                 return this.stack[i];
             }
         }
+    }
+
+    /**
+     * This method simply lists all of the objects
+     * @return the list
+     */
+    public String list() {
+        String text = "";
+        for (int i = 0; i < this.stack.length; i++) {
+            if (this.stack[i] != null) {
+                text += this.stack[i];
+                text += "; ";
+            }
+        }
+        return text;
     }
 }

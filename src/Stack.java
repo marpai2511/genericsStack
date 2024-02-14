@@ -9,6 +9,11 @@ public class Stack <T> {
         this.stack = (T[]) new Object[size];
     }
 
+    /**
+     * This method adds an item in the stack, it uses a "on top of eachother" system.
+     * @param item the item to be added
+     * @return whether the implementation was successful or not
+     */
     public boolean push(T item) {
         for(int i = 0; i < stack.length; i++) {
             if(this.stack[i] == null) {
@@ -18,6 +23,11 @@ public class Stack <T> {
         }
     }
 
+
+    /**
+     * This method removes the top object of the stack while also returning its value
+     * @return the object
+     */
     public T pop() {
         T[] newStack = this.stack.clone();
         for(int i = this.stack.length - 1; i >= 0; i--) {
@@ -28,6 +38,10 @@ public class Stack <T> {
         }
     }
 
+    /**
+     * This method is identical to the pop method but it does not remove any objects
+     * @return the object
+     */
     public T peek() {
         for(int i = this.stack.length - 1; i >= 0; i--) {
             if(this.stack[i] != null) {

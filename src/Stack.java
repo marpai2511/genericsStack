@@ -17,4 +17,22 @@ public class Stack <T> {
             }
         }
     }
+
+    public T pop() {
+        T[] newStack = this.stack.clone();
+        for(int i = this.stack.length - 1; i >= 0; i--) {
+            if(this.stack[i] != null) {
+                this.stack[i] = null;
+                return newStack[i];
+            }
+        }
+    }
+
+    public T peek() {
+        for(int i = this.stack.length - 1; i >= 0; i--) {
+            if(this.stack[i] != null) {
+                return this.stack[i];
+            }
+        }
+    }
 }
